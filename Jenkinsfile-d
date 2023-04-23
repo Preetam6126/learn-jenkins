@@ -22,6 +22,7 @@ pipeline {
     stage("one") {
       steps {
       echo "one"
+      sh 'env'
       }
     }
     stage("two") {
