@@ -3,17 +3,14 @@ node( "workstation" ) {
     
     try {
         withCredentials([usernameColonPassword(credentialsId: 'SSH', variable: 'USERPASS')]) {
+            
             stage("one") {
                 echo "one"
                 sh 'env'
                 
             }
         }
-  
-    stage("one") {
-      echo "one"
-      }
-      
+
     stage("two") {
       echo "two"
       }
