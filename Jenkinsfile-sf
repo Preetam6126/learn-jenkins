@@ -1,8 +1,9 @@
 node ("workstation"){
- 
+ withCredentials([usernamePassword(credentialsId: 'SSH', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')])
     stage("one"){
      
-       echo "i am the best"
+       echo $USERNAME
+       echo $PASSWORD
     }
     
      stage("two") {
