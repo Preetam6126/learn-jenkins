@@ -1,0 +1,19 @@
+pipeline {
+   agent any {
+  
+  stages {
+    
+    stage("one"){
+      steps {
+       echo "i am the best"
+      }
+    }
+        
+     stage("two") {
+       stage("one"){
+         echo " i m the best two"
+         }
+        }
+       }
+      }
+     }
