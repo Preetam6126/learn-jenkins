@@ -1,4 +1,10 @@
 node ("workstation"){
+
+ parameters {
+        string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
+        password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
+    }
+
 env.PREETAM_URL = "www.google.com"
  withCredentials([usernamePassword(credentialsId: 'SSH', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]){
     stage("one"){
