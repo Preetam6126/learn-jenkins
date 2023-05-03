@@ -1,9 +1,11 @@
 node ("workstation"){
+env.PREETAM_URL = "www.google.com"
  withCredentials([usernamePassword(credentialsId: 'SSH', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]){
     stage("one"){
      
       sh 'echo $USERNAME'
       sh 'echo $PASSWORD > /tmp/env'
+      sh 'env'
     }
     }
      stage("two") {
