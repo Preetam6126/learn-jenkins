@@ -10,7 +10,7 @@ pipeline {
     }
         
      stage("two") {
-       stage("one"){
+       steps {
          echo " i m the best two"
          }
         }
