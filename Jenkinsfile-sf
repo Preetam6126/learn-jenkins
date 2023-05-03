@@ -1,0 +1,15 @@
+node ("workstation"){
+ 
+    stage("one"){
+     
+       echo "i am the best"
+    }
+    
+     stage("two") {
+
+         echo " i m the best two"
+         }
+        }
+       
+      
+     
